@@ -4,7 +4,7 @@ const gameTimer = () => setInterval(incTimer, 1000);
 
 class Enemy {
   constructor(x, y) {
-    this.sprite = "images/enemy-bug.png";
+    this.sprite = "../src/images/enemy-bug.png";
     this.x = x;
     this.y = y;
     this.velX = (Math.random() + 1) * 70;
@@ -52,9 +52,6 @@ class Enemy {
 }
 
 class Player {
-  static level = 1;
-  static highestlevel = 1;
-
   constructor(x, y) {
     this.sprite = "images/char-boy.png";
     this.x = x;
@@ -190,10 +187,10 @@ class Sound {
     };
   }
 }
-const hitSound = new Sound("sounds/diesound.mp3");
-const waterSound = new Sound("sounds/watersplat.mp3");
-const grassSound = new Sound("sounds/grass.wav");
-const stoneSound = new Sound("sounds/stone.wav");
+const hitSound = new Sound("./sounds/diesound.mp3");
+const waterSound = new Sound("./sounds/watersplat.mp3");
+const grassSound = new Sound("./sounds/grass.wav");
+const stoneSound = new Sound("./sounds/stone.wav");
 
 gameTimer();
 
